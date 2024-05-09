@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Empresas">
+      <content>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="195.0" layoutY="12.0" prefHeight="20.0" prefWidth="230.0" text="GESTION DE DATOS DE EMPRESAS" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Separator layoutX="181.0" layoutY="47.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0" />
+                  <Separator layoutX="25.0" layoutY="160.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="160.0" />
+                  <Label layoutX="10.0" layoutY="36.0" text="Empresa" />
+                  <Label layoutX="10.0" layoutY="146.0" text="Personas" />
+                  <Separator layoutX="25.0" layoutY="370.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+                  <Label layoutX="10.0" layoutY="356.0" text="Reflejo de la Base de Datos" />
+                  <Label layoutX="5.0" layoutY="62.0" text="Código Empresa:" />
+                  <Label layoutX="151.0" layoutY="62.0" text="CIF:" />
+                  <Label layoutX="262.0" layoutY="62.0" text="Nombre:" />
+                  <Label layoutX="5.0" layoutY="92.0" text="Dirección:" />
+                  <Label layoutX="225.0" layoutY="92.0" text="C.P:" />
+                  <Label layoutX="315.0" layoutY="92.0" text="Localidad:" />
+                  <Label layoutX="5.0" layoutY="122.0" text="Jornada:" />
+                  <Label layoutX="135.0" layoutY="122.0" text="Modalidad:" />
+                  <Label layoutX="305.0" layoutY="122.0" text="Mail:" />
+                  <Label layoutX="5.0" layoutY="172.0" text="DNI Rep. Legal:" />
+                  <Label layoutX="175.0" layoutY="172.0" text="Nombre RL:" />
+                  <Label layoutX="325.0" layoutY="172.0" text="Apellidos RL:" />
+                  <Label layoutX="5.0" layoutY="202.0" text="DNI  Tut. Laboral:" />
+                  <Label layoutX="165.0" layoutY="202.0" text="Nombre TL:" />
+                  <Label layoutX="315.0" layoutY="202.0" text="Apellidos TL:" />
+                  <Label layoutX="475.0" layoutY="202.0" text="Tlf TL:" />
+                  <Button layoutX="189.0" layoutY="276.0" mnemonicParsing="false" text="Insertar" />
+                  <Button layoutX="259.0" layoutY="276.0" mnemonicParsing="false" text="Modificar" />
+                  <Button layoutX="339.0" layoutY="276.0" mnemonicParsing="false" text="Eliminar" />
+                  <Separator layoutX="35.0" layoutY="230.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+                  <TableView layoutX="25.0" layoutY="384.0" prefHeight="150.0" prefWidth="230.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="CIF" />
+                      <TableColumn prefWidth="75.0" text="Nombre" />
+                        <TableColumn prefWidth="75.0" text="Dirección" />
+                        <TableColumn prefWidth="75.0" text="C.P." />
+                        <TableColumn prefWidth="75.0" text="Localidad" />
+                        <TableColumn prefWidth="75.0" text="Jornada" />
+                        <TableColumn prefWidth="75.0" text="Modalidad" />
+                        <TableColumn prefWidth="75.0" text="Mail" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Alumnos">
+      <content>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="221.0" layoutY="46.0" text="GESTIÓN DE DATOS DE ALUMNOS" textAlignment="JUSTIFY" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="200.0" layoutY="45.0" prefWidth="200.0" style="-fx-background-color: Black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Tutores">
+      <content>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="246.0" layoutY="24.0" text="GESTIÓN DE DATOS DE TUTORES" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="193.0" layoutY="49.0" prefWidth="200.0" style="-fx-background-color: Black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Asignación">
+      <content>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="229.0" layoutY="46.0" text="GESTIÓN DE LA ASIGNACIÓN DE PLAZAS" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="175.0" layoutY="82.0" text="Elección de Alumnos:" />
+                  <Label layoutX="174.0" layoutY="130.0" text="Elección de Empresa:" />
+                  <Label layoutX="185.0" layoutY="176.0" text="Elección de Tutor:" />
+                  <SplitMenuButton layoutX="300.0" layoutY="172.0" mnemonicParsing="false" text="Selecciona un tutor">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </SplitMenuButton>
+                  <SplitMenuButton layoutX="300.0" layoutY="126.0" mnemonicParsing="false" text="Selecciona una empresa">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </SplitMenuButton>
+                  <SplitMenuButton layoutX="300.0" layoutY="78.0" mnemonicParsing="false" text="Selecciona un alumno">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </SplitMenuButton>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
