@@ -38,39 +38,47 @@
                   <Label layoutX="165.0" layoutY="202.0" text="Nombre TL:" />
                   <Label layoutX="315.0" layoutY="202.0" text="Apellidos TL:" />
                   <Label layoutX="475.0" layoutY="202.0" text="Tlf TL:" />
-                  <Button fx:id="boton_insertar" layoutX="189.0" layoutY="276.0" mnemonicParsing="false" onAction="#función_Insertar" text="Insertar" />
-                  <Button fx:id="boton_modificar" layoutX="259.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcion_modificar" text="Modificar" />
-                  <Button fx:id="boton_eliminar" layoutX="339.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcion_eliminar" text="Eliminar" />
+                  <Button fx:id="botonInsertar" layoutX="189.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcionInsertar" text="Insertar" />
+                  <Button fx:id="botonModificar" layoutX="259.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcionModificar" text="Modificar" />
+                  <Button fx:id="botonEliminar" layoutX="339.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcionEliminar" text="Eliminar" />
                   <Separator layoutX="35.0" layoutY="230.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
                   <Separator layoutX="25.0" layoutY="143.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="143.0" />
-                  <TableView layoutX="25.0" layoutY="384.0" prefHeight="150.0" prefWidth="230.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+                  <TextField fx:id="txtCodEmpresa" layoutX="97.0" layoutY="58.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField fx:id="txtCif" layoutX="192.0" layoutY="58.0" prefHeight="25.0" prefWidth="59.0" />
+                  <TextField fx:id="txtNombre" layoutX="311.0" layoutY="58.0" prefHeight="25.0" prefWidth="143.0" />
+                  <TextField fx:id="txtDireccion" layoutX="58.0" layoutY="88.0" prefHeight="25.0" prefWidth="143.0" />
+                  <TextField fx:id="txtCodPostal" layoutX="247.0" layoutY="88.0" prefHeight="25.0" prefWidth="59.0" />
+                  <TextField fx:id="txtLocalidad" layoutX="369.0" layoutY="88.0" prefHeight="25.0" prefWidth="143.0" />
+                  <TextField fx:id="txtJornada" layoutX="51.0" layoutY="118.0" prefHeight="25.0" prefWidth="59.0" />
+                  <TextField fx:id="txtModalidad" layoutX="197.0" layoutY="118.0" prefHeight="25.0" prefWidth="97.0" />
+                  <TextField fx:id="txtEmail" layoutX="332.0" layoutY="118.0" prefHeight="25.0" prefWidth="143.0" />
+                  <TextField fx:id="txtDniResponsable" layoutX="87.0" layoutY="168.0" prefHeight="25.0" prefWidth="79.0" />
+                  <TextField fx:id="txtNombreResponsable" layoutX="239.0" layoutY="168.0" prefHeight="25.0" prefWidth="79.0" />
+                   <TextField fx:id="txtApellidosResponsable" layoutX="398.0" layoutY="168.0" prefHeight="25.0" prefWidth="143.0" />
+                  <TextField fx:id="txtDniTl" layoutX="99.0" layoutY="198.0" prefHeight="25.0" prefWidth="59.0" />
+                   <TextField fx:id="txtNombreTl" layoutX="228.0" layoutY="198.0" prefHeight="25.0" prefWidth="79.0" />
+                  <TextField fx:id="txtApellidosTl" layoutX="386.0" layoutY="198.0" prefHeight="25.0" prefWidth="79.0" />
+                  <TextField fx:id="txtTlfTl" layoutX="508.0" layoutY="198.0" prefHeight="25.0" prefWidth="67.0" />
+                  <TableView fx:id="tablaEmpresa" layoutX="10.0" layoutY="376.0" prefHeight="190.0" prefWidth="584.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="CIF" />
-                      <TableColumn prefWidth="75.0" text="Nombre" />
-                        <TableColumn prefWidth="75.0" text="Dirección" />
-                        <TableColumn prefWidth="75.0" text="C.P." />
-                        <TableColumn prefWidth="75.0" text="Localidad" />
-                        <TableColumn prefWidth="75.0" text="Jornada" />
-                        <TableColumn prefWidth="75.0" text="Modalidad" />
-                        <TableColumn prefWidth="75.0" text="Mail" />
+                      <TableColumn fx:id="codEmpresa" prefWidth="75.0" text="CodEmpresa" />
+                      <TableColumn fx:id="Cif" prefWidth="75.0" text="CIF" />
+                        <TableColumn fx:id="nombreEmpresa" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="direccion" prefWidth="75.0" text="Direccion" />
+                        <TableColumn fx:id="codPostal" prefWidth="75.0" text="CodPostal" />
+                        <TableColumn fx:id="localidad" prefWidth="75.0" text="Localidad" />
+                        <TableColumn fx:id="jornada" prefWidth="75.0" text="Jornada" />
+                        <TableColumn fx:id="modalidad" prefWidth="75.0" text="Modalidad" />
+                        <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="dniResponsable" prefWidth="75.0" text="dniResponsable" />
+                        <TableColumn fx:id="nombreResponsable" prefWidth="75.0" text="nombreResponsable" />
+                        <TableColumn fx:id="apellidosResponsable" prefWidth="75.0" text="apellidosResponsable" />
+                        <TableColumn fx:id="dniTl" prefWidth="75.0" text="dniTutorLegal" />
+                        <TableColumn fx:id="nombreTl" prefWidth="75.0" text="nombreTL" />
+                        <TableColumn fx:id="apellidosTl" prefWidth="75.0" text="apellidosTL" />
+                        <TableColumn fx:id="tlfTl" prefWidth="75.0" text="tlfTutorLegal" />
                     </columns>
                   </TableView>
-                  <TextField fx:id="empresa" layoutX="97.0" layoutY="58.0" prefHeight="25.0" prefWidth="61.0" />
-                  <TextField fx:id="cif" layoutX="192.0" layoutY="58.0" prefHeight="25.0" prefWidth="59.0" />
-                  <TextField fx:id="nombre" layoutX="311.0" layoutY="58.0" prefHeight="25.0" prefWidth="143.0" />
-                  <TextField fx:id="direccion" layoutX="58.0" layoutY="88.0" prefHeight="25.0" prefWidth="143.0" />
-                  <TextField fx:id="cod_postal" layoutX="247.0" layoutY="88.0" prefHeight="25.0" prefWidth="59.0" />
-                  <TextField fx:id="localidad" layoutX="369.0" layoutY="88.0" prefHeight="25.0" prefWidth="143.0" />
-                  <TextField fx:id="jornada" layoutX="51.0" layoutY="118.0" prefHeight="25.0" prefWidth="59.0" />
-                  <TextField fx:id="modalidad" layoutX="197.0" layoutY="118.0" prefHeight="25.0" prefWidth="97.0" />
-                  <TextField fx:id="email" layoutX="332.0" layoutY="118.0" prefHeight="25.0" prefWidth="143.0" />
-                  <TextField fx:id="dniResponsable" layoutX="87.0" layoutY="168.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="nombreResponsable" layoutX="239.0" layoutY="168.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="nombre_tl" layoutX="228.0" layoutY="198.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="dni_tl" layoutX="99.0" layoutY="198.0" prefHeight="25.0" prefWidth="59.0" />
-                  <TextField fx:id="apellidos_responsable" layoutX="398.0" layoutY="168.0" prefHeight="25.0" prefWidth="143.0" />
-                  <TextField fx:id="apellidos_tl" layoutX="386.0" layoutY="198.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="tlf_tl" layoutX="508.0" layoutY="198.0" prefHeight="25.0" prefWidth="67.0" />
                </children></AnchorPane>
       </content>
     </Tab>

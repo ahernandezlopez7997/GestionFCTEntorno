@@ -1,53 +1,73 @@
 package org.example.appgestionfct;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.SplitMenuButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
+import java.sql.*;
 
 public class Controlador {
-    public TextField empresa;
-    public TextField cif;
-    public TextField nombre;
-    public TextField direccion;
-    public TextField cod_postal;
-    public TextField localidad;
-    public TextField jornada;
-    public TextField modalidad;
-    public TextField email;
-    public TextField dniResponsable;
-    public TextField nombreResponsable;
-    public TextField nombre_tl;
-    public TextField dni_tl;
-    public TextField apellidos_responsable;
-    public TextField apellidos_tl;
-    public TextField tlf_tl;
-    public Button boton_insertar;
-    public Button boton_modificar;
-    public Button boton_eliminar;
+    public TextField txtCodEmpresa;
+    public TextField txtCif;
+    public TextField txtNombre;
+    public TextField txtDireccion;
+    public TextField txtCodPostal;
+    public TextField txtLocalidad;
+    public TextField txtJornada;
+    public TextField txtModalidad;
+    public TextField txtEmail;
+    public TextField txtDniResponsable;
+    public TextField txtNombreResponsable;
+    public TextField txtApellidosResponsable;
+    public TextField txtDniTl;
+    public TextField txtNombreTl;
+    public TextField txtApellidosTl;
+    public TextField txtTlfTl;
+    public Button botonInsertar;
+    public Button botonModificar;
+    public Button botonEliminar;
     public Button btnDat;
     public Button btnXml;
     public SplitMenuButton btnTutor;
     public SplitMenuButton btnEmpresa;
     public SplitMenuButton btnAlumno;
     public Button btnContinuar;
-    @FXML
-    private Label welcomeText;
+    public TableView<Empresa> tablaEmpresa;
+    public TableColumn<Empresa, Integer> codEmpresa;
+    public TableColumn<Empresa, String> Cif;
+    public TableColumn<Empresa, String> nombreEmpresa;
+    public TableColumn<Empresa, String> direccion;
+    public TableColumn<Empresa, String> codPostal;
+    public TableColumn<Empresa, String> localidad;
+    public TableColumn<Empresa, Integer> jornada;
+    public TableColumn<Empresa, Integer> modalidad;
+    public TableColumn email;
+    public TableColumn dniResponsable;
+    public TableColumn nombreResponsable;
+    public TableColumn apellidosResponsable;
+    public TableColumn dniTl;
+    public TableColumn nombreTl;
+    public TableColumn apellidosTl;
+    public TableColumn tlfTl;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void initialize() {
+        DataBase conexion = new DataBase();
+        conexion.connectDatabase();
+        Empresa empresa = new Empresa();
+        ObservableList<Empresa> listaEmpresa = empresa.getEmpresa();
+        tablaEmpresa.setItems(listaEmpresa);
     }
 
-    public void función_Insertar(ActionEvent actionEvent) {
+
+    public void funcionInsertar(ActionEvent actionEvent) {
+
     }
 
-    public void funcion_modificar(ActionEvent actionEvent) {
+    public void funcionModificar(ActionEvent actionEvent) {
     }
 
-    public void funcion_eliminar(ActionEvent actionEvent) {
+    public void funcionEliminar(ActionEvent actionEvent) {
     }
 
     public void insertarDat(ActionEvent actionEvent) {
