@@ -61,6 +61,7 @@ public class Controlador {
     public Button btnContinuar;
     public Label mensajeDat;
     public Label mensajeXml;
+    public Label mensajeAsignacion;
 
     private Alumno alumnoSeleccionado;
     private Tutor tutorSeleccionado;
@@ -83,7 +84,6 @@ public class Controlador {
 
             mensajeDat.setVisible(false);
             mensajeXml.setVisible(false);
-
 
 
         } catch (SQLException e) {
@@ -167,17 +167,17 @@ public class Controlador {
             initialize();
 
 
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public void funcionModificar(ActionEvent actionEvent) {
-        try{
+        try {
             Connection conexion = DataBase.getConnection();
             PreparedStatement statement;
 
-            if (empresaSeleccionada != null){
+            if (empresaSeleccionada != null) {
                 statement = conexion.prepareStatement("UPDATE empresa SET cod_empresa = ?, nombre = ?, direccion = ?, cif = ?, cod_postal = ?, localidad = ?, tipo_jornada = ?, modalidad = ?, email = ?, dni_responsable = ?, nombre_responsable = ?, apellidos_responsable = ?, dni_tutor_legal = ?, nombre_tutor_legal = ?, apellidos_tutor_legal = ?, tlf_tutor_legal = ? WHERE cod_empresa = ?");
 
                 statement.setInt(1, Integer.parseInt(txtCodEmpresa.getText()));
@@ -205,7 +205,7 @@ public class Controlador {
                 initialize();
             }
 
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -253,37 +253,63 @@ public class Controlador {
     }
 
     public void insertarDat(ActionEvent actionEvent) {
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("DAT Files", "*.dat"));
-            fileChooser.setTitle("Open DAT File");
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("DAT Files", "*.dat"));
+        fileChooser.setTitle("Open DAT File");
 
-            // Obtén la referencia al Stage actual
-            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+        // Obtén la referencia al Stage actual
+        Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
 
-            // Mostrar el cuadro de diálogo de archivo
-            File file = fileChooser.showOpenDialog(stage);
+        // Mostrar el cuadro de diálogo de archivo
+        File file = fileChooser.showOpenDialog(stage);
 
-            if (file != null) {
-                readFile(file);
-            }
+        if (file != null) {
+            readFile(file);
         }
+    }
 
-        private void readFile(File file) {
-            try (FileInputStream fis = new FileInputStream(file)) {
-                int content;
-                while ((content = fis.read()) != -1) {
-                    // Procesar el archivo byte a byte (o como necesites)
-                    System.out.print((char) content);
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+    private void readFile(File file) {
+        try (FileInputStream fis = new FileInputStream(file)) {
+            int content;
+            StringBuilder sb = new StringBuilder();
+            while ((content = fis.read()) != -1) {
+                // Procesar el archivo byte a byte (o como necesites)
+                sb.append((char) content);
             }
-            mensajeDat.setVisible(true);
+            insertIntoDatabase(sb.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void insertIntoDatabase(String data) {
+        try {
+            Connection connection = DataBase.getConnection();
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO alumno (cod_alumno, dni, nombre, apellidos, fecha_nacimiento) VALUES (?, ?, ? ,?, ?)");
+            statement.setString(1, "cod_alumno");
+            statement.setString(2, "dni");
+            statement.setString(3, "nombre");
+            statement.setString(4, "apellidos");
+            statement.setString(5, "fecha_nacimiento");
+
+
+            statement.executeUpdate();
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        mensajeDat.setVisible(true);
     }
 
     public void insertarXml(ActionEvent actionEvent) {
     }
 
     public void continuarAsignacion(ActionEvent actionEvent) {
+        if (alumnoSeleccionado != null && tutorSeleccionado != null && empresaSeleccionada != null) {
+            mensajeAsignacion.setText(alumnoSeleccionado + "asingado correctamente");
+        } else {
+            mensajeAsignacion.setText("Selecciona un alumno, un tutor y una empresa");
+        }
     }
 }

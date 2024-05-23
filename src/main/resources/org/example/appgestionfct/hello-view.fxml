@@ -101,7 +101,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label fx:id="mensajeDat" layoutX="47.0" layoutY="363.0" text="Información del fichero ahora registrada en la tabla de Alumnos" wrapText="true" AnchorPane.topAnchor="350.0">
+                  <Label fx:id="mensajeDat" alignment="CENTER" layoutX="32.0" layoutY="352.0" prefHeight="27.0" prefWidth="537.0" style="-fx-background-color: rgb(153,204,102);" text="Información del fichero registrada en la tabla de Alumnos" wrapText="true" AnchorPane.topAnchor="352.0">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
@@ -130,7 +130,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label fx:id="mensajeXml" layoutX="90.0" layoutY="371.0" text="Información del fichero registrada en la tabla Tutores" AnchorPane.topAnchor="350.0">
+                  <Label fx:id="mensajeXml" alignment="CENTER" layoutX="28.0" layoutY="350.0" prefHeight="27.0" prefWidth="537.0" style="-fx-background-color: rgb(102, 153, 204);" text="Información del fichero registrada en la tabla Tutores" AnchorPane.topAnchor="350.0">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
@@ -153,7 +153,10 @@
                    <Label layoutX="194.0" layoutY="176.0" text="Elección de Tutor:" />
                    <ComboBox fx:id="selectorTutor" layoutX="297.0" layoutY="172.0" prefWidth="150.0" />
                    <Button fx:id="btnContinuar" layoutX="262.0" layoutY="227.0" mnemonicParsing="false" onAction="#continuarAsignacion" text="Continuar" />
-                  <Label layoutX="259.0" layoutY="271.0" text="El alumno tal etc etc" />
+                  <Label fx:id="mensajeAsignacion" alignment="CENTER" layoutX="73.0" layoutY="266.0" prefHeight="27.0" prefWidth="425.0" style="-fx-background-color: grey;" text="El alumno tal" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
 
                </children></AnchorPane>
       </content>
