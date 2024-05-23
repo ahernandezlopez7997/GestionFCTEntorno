@@ -17,9 +17,9 @@
                         <Font size="14.0" />
                      </font></Label>
                   <Separator layoutX="181.0" layoutY="47.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0" />
-                  <Separator layoutX="25.0" layoutY="160.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="160.0" />
+                  <Separator layoutX="25.0" layoutY="180.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="180.0" />
                   <Label fx:id="Titulo_empresa" layoutX="10.0" layoutY="36.0" text="Empresa" />
-                  <Label fx:id="Titulo_persona" layoutX="10.0" layoutY="146.0" text="Personas" />
+                  <Label fx:id="Titulo_persona" layoutX="10.0" layoutY="166.0" text="Personas" />
                   <Separator layoutX="25.0" layoutY="370.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
                   <Label layoutX="10.0" layoutY="356.0" text="Reflejo de la Base de Datos" />
                   <Label layoutX="5.0" layoutY="62.0" text="Código Empresa:" />
@@ -31,17 +31,17 @@
                   <Label layoutX="5.0" layoutY="122.0" text="Jornada:" />
                   <Label layoutX="135.0" layoutY="122.0" text="Modalidad:" />
                   <Label layoutX="305.0" layoutY="122.0" text="Mail:" />
-                  <Label layoutX="5.0" layoutY="172.0" text="DNI Rep. Legal:" />
-                  <Label layoutX="175.0" layoutY="172.0" text="Nombre RL:" />
-                  <Label layoutX="325.0" layoutY="172.0" text="Apellidos RL:" />
-                  <Label layoutX="5.0" layoutY="202.0" text="DNI  Tut. Laboral:" />
-                  <Label layoutX="165.0" layoutY="202.0" text="Nombre TL:" />
-                  <Label layoutX="315.0" layoutY="202.0" text="Apellidos TL:" />
-                  <Label layoutX="475.0" layoutY="202.0" text="Tlf TL:" />
+                  <Label layoutX="5.0" layoutY="192.0" text="DNI Rep. Legal:" />
+                  <Label layoutX="175.0" layoutY="192.0" text="Nombre RL:" />
+                  <Label layoutX="325.0" layoutY="192.0" text="Apellidos RL:" />
+                  <Label layoutX="5.0" layoutY="222.0" text="DNI  Tut. Laboral:" />
+                  <Label layoutX="165.0" layoutY="222.0" text="Nombre TL:" />
+                  <Label layoutX="315.0" layoutY="222.0" text="Apellidos TL:" />
+                  <Label layoutX="475.0" layoutY="222.0" text="Tlf TL:" />
                   <Button fx:id="botonInsertar" layoutX="189.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcionInsertar" text="Insertar" />
                   <Button fx:id="botonModificar" layoutX="259.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcionModificar" text="Modificar" />
                   <Button fx:id="botonEliminar" layoutX="339.0" layoutY="276.0" mnemonicParsing="false" onAction="#funcionEliminar" text="Eliminar" />
-                  <Separator layoutX="35.0" layoutY="230.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+                  <Separator layoutX="25.0" layoutY="250.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
                   <Separator layoutX="25.0" layoutY="143.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="143.0" />
                   <TextField fx:id="txtCodEmpresa" layoutX="97.0" layoutY="58.0" prefHeight="25.0" prefWidth="61.0" />
                   <TextField fx:id="txtCif" layoutX="192.0" layoutY="58.0" prefHeight="25.0" prefWidth="59.0" />
@@ -52,31 +52,31 @@
                   <TextField fx:id="txtJornada" layoutX="51.0" layoutY="118.0" prefHeight="25.0" prefWidth="59.0" />
                   <TextField fx:id="txtModalidad" layoutX="197.0" layoutY="118.0" prefHeight="25.0" prefWidth="97.0" />
                   <TextField fx:id="txtEmail" layoutX="332.0" layoutY="118.0" prefHeight="25.0" prefWidth="143.0" />
-                  <TextField fx:id="txtDniResponsable" layoutX="87.0" layoutY="168.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="txtNombreResponsable" layoutX="239.0" layoutY="168.0" prefHeight="25.0" prefWidth="79.0" />
-                   <TextField fx:id="txtApellidosResponsable" layoutX="398.0" layoutY="168.0" prefHeight="25.0" prefWidth="143.0" />
-                  <TextField fx:id="txtDniTl" layoutX="99.0" layoutY="198.0" prefHeight="25.0" prefWidth="59.0" />
-                   <TextField fx:id="txtNombreTl" layoutX="228.0" layoutY="198.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="txtApellidosTl" layoutX="386.0" layoutY="198.0" prefHeight="25.0" prefWidth="79.0" />
-                  <TextField fx:id="txtTlfTl" layoutX="508.0" layoutY="198.0" prefHeight="25.0" prefWidth="67.0" />
-                  <TableView fx:id="tablaEmpresa" layoutX="10.0" layoutY="376.0" prefHeight="190.0" prefWidth="584.0">
+                  <TextField fx:id="txtDniResponsable" layoutX="87.0" layoutY="188.0" prefHeight="25.0" prefWidth="79.0" />
+                  <TextField fx:id="txtNombreResponsable" layoutX="239.0" layoutY="188.0" prefHeight="25.0" prefWidth="79.0" />
+                   <TextField fx:id="txtApellidosResponsable" layoutX="398.0" layoutY="188.0" prefHeight="25.0" prefWidth="143.0" />
+                  <TextField fx:id="txtDniTl" layoutX="99.0" layoutY="218.0" prefHeight="25.0" prefWidth="59.0" />
+                   <TextField fx:id="txtNombreTl" layoutX="228.0" layoutY="218.0" prefHeight="25.0" prefWidth="79.0" />
+                  <TextField fx:id="txtApellidosTl" layoutX="386.0" layoutY="218.0" prefHeight="25.0" prefWidth="79.0" />
+                  <TextField fx:id="txtTlfTl" layoutX="508.0" layoutY="218.0" prefHeight="25.0" prefWidth="67.0" />
+                  <TableView fx:id="tablaEmpresa" layoutX="10.0" layoutY="376.0" onMouseClicked="#seleccionar" prefHeight="190.0" prefWidth="584.0">
                     <columns>
-                      <TableColumn fx:id="codEmpresa" prefWidth="75.0" text="CodEmpresa" />
-                      <TableColumn fx:id="Cif" prefWidth="75.0" text="CIF" />
-                        <TableColumn fx:id="nombreEmpresa" prefWidth="75.0" text="Nombre" />
-                        <TableColumn fx:id="direccion" prefWidth="75.0" text="Direccion" />
-                        <TableColumn fx:id="codPostal" prefWidth="75.0" text="CodPostal" />
-                        <TableColumn fx:id="localidad" prefWidth="75.0" text="Localidad" />
-                        <TableColumn fx:id="jornada" prefWidth="75.0" text="Jornada" />
-                        <TableColumn fx:id="modalidad" prefWidth="75.0" text="Modalidad" />
-                        <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
-                        <TableColumn fx:id="dniResponsable" prefWidth="75.0" text="dniResponsable" />
-                        <TableColumn fx:id="nombreResponsable" prefWidth="75.0" text="nombreResponsable" />
-                        <TableColumn fx:id="apellidosResponsable" prefWidth="75.0" text="apellidosResponsable" />
-                        <TableColumn fx:id="dniTl" prefWidth="75.0" text="dniTutorLegal" />
-                        <TableColumn fx:id="nombreTl" prefWidth="75.0" text="nombreTL" />
-                        <TableColumn fx:id="apellidosTl" prefWidth="75.0" text="apellidosTL" />
-                        <TableColumn fx:id="tlfTl" prefWidth="75.0" text="tlfTutorLegal" />
+                      <TableColumn fx:id="colCodEmpresa" prefWidth="75.0" text="CodEmpresa" />
+                      <TableColumn fx:id="colCif" prefWidth="75.0" text="CIF" />
+                        <TableColumn fx:id="colNombreEmpresa" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="colDireccion" prefWidth="75.0" text="Direccion" />
+                        <TableColumn fx:id="colCodPostal" prefWidth="75.0" text="CodPostal" />
+                        <TableColumn fx:id="colLocalidad" prefWidth="75.0" text="Localidad" />
+                        <TableColumn fx:id="colJornada" prefWidth="75.0" text="Jornada" />
+                        <TableColumn fx:id="colModalidad" prefWidth="75.0" text="Modalidad" />
+                        <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="colDniResponsable" prefWidth="75.0" text="dniResponsable" />
+                        <TableColumn fx:id="colNombreResponsable" prefWidth="75.0" text="nombreResponsable" />
+                        <TableColumn fx:id="colApellidosResponsable" prefWidth="75.0" text="apellidosResponsable" />
+                        <TableColumn fx:id="colDniTl" prefWidth="75.0" text="dniTutorLegal" />
+                        <TableColumn fx:id="colNombreTl" prefWidth="75.0" text="nombreTL" />
+                        <TableColumn fx:id="colApellidosTl" prefWidth="75.0" text="apellidosTL" />
+                        <TableColumn fx:id="colTlfTl" prefWidth="75.0" text="tlfTutorLegal" />
                     </columns>
                   </TableView>
                </children></AnchorPane>
@@ -141,28 +141,14 @@
                      </font>
                   </Label>
                   <Label layoutX="175.0" layoutY="82.0" text="Elección de Alumnos:" />
-                  <Label layoutX="174.0" layoutY="130.0" text="Elección de Empresa:" />
-                  <Label layoutX="185.0" layoutY="176.0" text="Elección de Tutor:" />
-                  <SplitMenuButton fx:id="btnTutor" layoutX="300.0" layoutY="172.0" mnemonicParsing="false" onAction="#seleccionTutor" text="Selecciona un tutor">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                  </SplitMenuButton>
-                  <SplitMenuButton fx:id="btnEmpresa" layoutX="300.0" layoutY="126.0" mnemonicParsing="false" onAction="#seleccionEmpresa" text="Selecciona una empresa">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                  </SplitMenuButton>
-                  <SplitMenuButton fx:id="btnAlumno" layoutX="300.0" layoutY="78.0" mnemonicParsing="false" onAction="#seleccionAlumno" text="Selecciona un alumno">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                  </SplitMenuButton>
-                  <Button fx:id="btnContinuar" layoutX="262.0" layoutY="227.0" mnemonicParsing="false" onAction="#continuarAsignacion" text="Continuar" />
+                   <ComboBox fx:id="selectorAlumnos" layoutX="297.0" layoutY="78.0" prefWidth="150.0" />
+                  <Label layoutX="176.0" layoutY="130.0" text="Elección de Empresa:" />
+                   <ComboBox fx:id="selectorEmpresa" layoutX="297.0" layoutY="126.0" prefWidth="150.0" />
+                   <Label layoutX="194.0" layoutY="176.0" text="Elección de Tutor:" />
+                   <ComboBox fx:id="selectorTutor" layoutX="297.0" layoutY="172.0" prefWidth="150.0" />
+                   <Button fx:id="btnContinuar" layoutX="262.0" layoutY="227.0" mnemonicParsing="false" onAction="#continuarAsignacion" text="Continuar" />
                   <Label layoutX="259.0" layoutY="271.0" text="El alumno tal etc etc" />
+
                </children></AnchorPane>
       </content>
     </Tab>
