@@ -1,16 +1,9 @@
 package org.example.appgestionfct;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 public class Empresa {
-    private String nombreEmpresa;
     private Integer codEmpresa;
     private String cif;
+    private String nombreEmpresa;
     private String direccion;
     private String codPostal;
     private String localidad;
@@ -25,10 +18,10 @@ public class Empresa {
     private String apellidosTl;
     private String tlfTl;
 
-    public Empresa(String nombre, Integer codEmpresa, String cif, String direccion, String codPostal, String localidad, Integer jornada, Integer modalidad, String email, String dniResponsable, String nombreResponsable, String nombreTl, String dniTl, String apellidosResponsable, String apellidosTl, String tlfTl) {
-        this.nombreEmpresa = nombre;
+    public Empresa(Integer codEmpresa, String cif, String nombreEmpresa, String direccion, String codPostal, String localidad, Integer jornada, Integer modalidad, String email, String dniResponsable, String nombreResponsable, String apellidosResponsable, String dniTl, String nombreTl, String apellidosTl, String tlfTl) {
         this.codEmpresa = codEmpresa;
         this.cif = cif;
+        this.nombreEmpresa = nombreEmpresa;
         this.direccion = direccion;
         this.codPostal = codPostal;
         this.localidad = localidad;
@@ -37,9 +30,9 @@ public class Empresa {
         this.email = email;
         this.dniResponsable = dniResponsable;
         this.nombreResponsable = nombreResponsable;
-        this.nombreTl = nombreTl;
-        this.dniTl = dniTl;
         this.apellidosResponsable = apellidosResponsable;
+        this.dniTl = dniTl;
+        this.nombreTl = nombreTl;
         this.apellidosTl = apellidosTl;
         this.tlfTl = tlfTl;
     }
@@ -55,9 +48,7 @@ public class Empresa {
         this.nombreEmpresa = nombreEmpresa;
     }
 
-    public Integer getCodEmpresa() {
-        return codEmpresa;
-    }
+    public Integer getCodEmpresa() {return codEmpresa; }
 
     public void setCodEmpresa(Integer codEmpresa) {
         this.codEmpresa = codEmpresa;
@@ -194,44 +185,6 @@ public class Empresa {
                 ", apellidosTl='" + apellidosTl + '\'' +
                 ", tlfTl='" + tlfTl + '\'' +
                 '}';
-    }
-
-    public ObservableList<Empresa> getEmpresa(){
-        ObservableList<Empresa> listaEmpresa = FXCollections.observableArrayList();
-        DataBase conexion = new DataBase();
-        try{
-            Connection conn = conexion.connectDatabase();
-            Statement sentencia = conn.createStatement();
-            ResultSet rs = sentencia.executeQuery("SELECT * FROM empresa");
-
-            while (rs.next()){
-                String nombre = rs.getString("nombre");
-                Integer codEmpresa = Integer.valueOf(rs.getString("cod_empresa"));
-                String cif = rs.getString("cif");
-                String direccion = rs.getString("direccion");
-                String codPostal = rs.getString("cod_postal");
-                String localidad = rs.getString("localidad");
-                Integer jornada = Integer.valueOf(rs.getString("jornada"));
-                Integer modalidad = Integer.valueOf(rs.getString("modalidad"));
-                String email = rs.getString("email");
-                String dniResponsable = rs.getString("dni_responsable");
-                String nombreResponsable = rs.getString("nombre_responsable");
-                String apellidosResponsable = rs.getString("apellidos_responsable");
-                String dniTl = rs.getString("dni_tl");
-                String nombreTl = rs.getString("nombre_tl");
-                String apellidosTl = rs.getString("apellidos_tl");
-                String tlfTl = rs.getString("tlf_tl");
-
-                Empresa datosEmpresa = new Empresa(nombre, codEmpresa, cif, direccion, codPostal, localidad, jornada, modalidad, email, dniResponsable, nombreResponsable, nombreTl, dniTl, apellidosResponsable, apellidosTl, tlfTl);
-                listaEmpresa.add(datosEmpresa);
-            }
-
-        }catch (Exception e){
-            System.out.println("Error al mostrar los datos de la tabla empresa");
-            e.printStackTrace();
-        }
-
-        return listaEmpresa;
     }
 
 }
