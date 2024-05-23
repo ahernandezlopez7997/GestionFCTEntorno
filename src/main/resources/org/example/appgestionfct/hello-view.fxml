@@ -92,7 +92,7 @@
                      </font>
                   </Label>
                   <Separator layoutX="200.0" layoutY="45.0" prefWidth="200.0" style="-fx-background-color: Black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0" />
-                  <Button fx:id="btnDat" layoutX="192.0" layoutY="234.0" mnemonicParsing="false" onAction="#insertarDat" AnchorPane.bottomAnchor="234.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="234.0">
+                  <Button fx:id="btnDat" layoutX="192.0" layoutY="234.0" mnemonicParsing="false" onAction="#insertarDat" AnchorPane.bottomAnchor="234.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="235.0">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -101,7 +101,10 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label layoutX="286.0" layoutY="381.0" text="Información del fichero" />
+                  <Label fx:id="mensajeDat" layoutX="47.0" layoutY="363.0" text="Información del fichero ahora registrada en la tabla de Alumnos" wrapText="true" AnchorPane.topAnchor="350.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
                </children></AnchorPane>
       </content>
     </Tab>
@@ -115,19 +118,22 @@
                      </font>
                   </Label>
                   <Separator layoutX="193.0" layoutY="49.0" prefWidth="200.0" style="-fx-background-color: Black;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0" />
-                  <Button fx:id="btnXml" layoutX="274.0" layoutY="273.0" mnemonicParsing="false" onAction="#insertarXml" AnchorPane.bottomAnchor="234.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="234.0">
+                  <Button fx:id="btnXml" layoutX="274.0" layoutY="273.0" mnemonicParsing="false" onAction="#insertarXml" AnchorPane.bottomAnchor="234.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="235.0">
                      <rotationAxis>
                         <Point3D />
                      </rotationAxis>
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="99.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../img/Img-xml.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label layoutX="286.0" layoutY="375.0" text="Información del fichero" />
+                  <Label fx:id="mensajeXml" layoutX="90.0" layoutY="371.0" text="Información del fichero registrada en la tabla Tutores" AnchorPane.topAnchor="350.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
                </children></AnchorPane>
       </content>
     </Tab>

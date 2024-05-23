@@ -7,8 +7,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.*;
 
 public class Controlador {
@@ -54,6 +59,8 @@ public class Controlador {
     public ComboBox selectorEmpresa;
     public ComboBox selectorTutor;
     public Button btnContinuar;
+    public Label mensajeDat;
+    public Label mensajeXml;
 
     private Alumno alumnoSeleccionado;
     private Tutor tutorSeleccionado;
@@ -73,6 +80,10 @@ public class Controlador {
             resultSet.close();
             statement.close();
             connection.close();
+
+            mensajeDat.setVisible(false);
+            mensajeXml.setVisible(false);
+
 
 
         } catch (SQLException e) {
@@ -242,6 +253,32 @@ public class Controlador {
     }
 
     public void insertarDat(ActionEvent actionEvent) {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("DAT Files", "*.dat"));
+            fileChooser.setTitle("Open DAT File");
+
+            // Obtén la referencia al Stage actual
+            Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+
+            // Mostrar el cuadro de diálogo de archivo
+            File file = fileChooser.showOpenDialog(stage);
+
+            if (file != null) {
+                readFile(file);
+            }
+        }
+
+        private void readFile(File file) {
+            try (FileInputStream fis = new FileInputStream(file)) {
+                int content;
+                while ((content = fis.read()) != -1) {
+                    // Procesar el archivo byte a byte (o como necesites)
+                    System.out.print((char) content);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            mensajeDat.setVisible(true);
     }
 
     public void insertarXml(ActionEvent actionEvent) {
